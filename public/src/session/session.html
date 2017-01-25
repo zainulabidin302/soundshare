@@ -1,0 +1,35 @@
+<div class="">
+  Your song is ready to share !
+
+  <ss-player-drct catch="catch" updates="updates" stream-url="stream_url" session="{{session}}"></ss-player-drct>
+
+
+  <table border="1px" width=100%>
+    <tr>
+      <td colspan="2">
+        <button type="button" name="button" ng-click="shareWhatsapp(streamUrl)">Share On Whatsapp</button>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Share on Email
+      </td>
+      <td>
+        <input type="text" name="name" value="" ng-model="data.email" placeholder="with WHO ? email please !">
+      </td>
+      <td>
+        <button type="button" name="button" ng-click="shareWithEmail(data.email)">Share</button>
+      </td>
+    </tr>
+  </table>
+
+  <a href="whatsapp://send?text={{session}}">Share on Whatsapp</a>
+  <a href="whatsapp://send?text=http://192.168.8.100:4200/khach/session30178923987298749823" data-action="share/whatsapp/share">Google</a>
+  <button type="button" name="button" ng-click="createSession('https://api.soundcloud.com/tracks/265669651/stream')">Test</button>
+
+</div>
+<div class="" >
+  <ul>
+    <li ng-repeat="session in updates" ng-click="catchSession(session.data)">{{getFirst(session.data)}}</li>
+  </ul>
+</div>

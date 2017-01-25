@@ -1,0 +1,11 @@
+Search Track (enter keyword):
+<input type="text" name="name" value="" ng-model="q">
+{{q}}
+<button type="button" name="button" ng-click="getResults(q)" ng-disabled="loading">Search</button>
+  <div class="" ng-transclude></div>
+<ul>
+    <li ng-if="loading">Loading, please wait</li>
+    <li ng-repeat="re in results ">{{re.title}}
+      <button ng-click="createSession(re.stream_url)"> Play & Share</button>
+      <img src="{{re.artwork_url}}" alt=""/></li>
+</ul>

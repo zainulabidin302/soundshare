@@ -1,0 +1,24 @@
+{
+  "name": "soundshare",
+  "description": "sound share",
+  "main": "index.js",
+  "authors": [
+    "'Zain' <'zain.ulabidin@crossover.com'>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.4",
+    "angular": "angularjs#~1.5.8",
+    "angular-route": "~1.5.8",
+    "lodash": "^4.16.4"
+  }
+}
